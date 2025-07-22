@@ -110,7 +110,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   message: 'Increment',
                   child: ElevatedButton(
                     onPressed: _incrementCounter,
-                    child: const Icon(Icons.add),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                          Colors.green[800], // Button background color
+                    ),
+                    child: const Icon(Icons.add, color: Colors.white),
                   ),
                 ),
                 const SizedBox(width: 20),
@@ -127,10 +131,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 const SizedBox(width: 20),
                 Tooltip(
-                  message: 'decrement',
+                  message: 'Decrement',
                   child: ElevatedButton(
                     onPressed: _decrementCounter,
-                    child: const Icon(Icons.remove),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.red, // Button background color
+                    ),
+                    child: const Icon(
+                      Icons.remove,
+                      color: Colors.white, // Set icon color here
+                    ),
                   ),
                 ),
               ],
